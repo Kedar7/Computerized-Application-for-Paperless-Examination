@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script> 
+	<script type="text/javascript" src="./js/javascript.js"></script>
+
+</head>
+<body>
+
+
+		Name: <input type="text" name="fname" id="fname" >
+
+		<script >
+
+			var dataSet1 = [ 145, 117, 168, 409, 304 ];
+			var dataSet2 = [ 212, 126, 188, 286, 487 ];
+			var dataSet3 = [ 188, 127, 176, 253, 393 ];
+			var dataSet4 = [ 121, 171, 172, 345, 222 ];
+			var dataSet5 = [ 192, 140, 248, 295, 244 ];
+
+			var dataSet = [];
+
+			//alert("dataset");
+
+			for ( i=0; i<5; i++ )
+				{
+					dataSet[i] = Number( dataSet1[i] ) + Number( dataSet2[i] ) + Number( dataSet3[i] ) + Number( dataSet4[i] ) + Number( dataSet5[i] );
+
+					dataSet[i] = dataSet[i] / 5;
+				}
+
+			// alert("dataset created");	
+
+
+
+
+			$("#fname").change( function() {
+
+				// alert( "Length = " + buffer.length );
+
+				prob = 1 / buffer.length;
+
+
+
+				for ( i=0; i< buffer.length - 1; i++ )
+				{
+					diff[i] = buffer[i+1] - buffer[i];
+
+					// alert( "DataSet = " +  dataSet[i] + " Actual = " + diff[i] + " Difference = " + ( dataSet[i] - diff[i]) );
+					
+					error = dataSet[i] - diff[i];
+
+					if( error < 0 )
+					{
+						error = error * -1 ;						
+					}
+
+					if( error < 100 ){
+						prob = prob + ( 1 / buffer.length );
+					}											
+
+				}
+
+				alert( " Same user probability = " + prob );			
+
+			} ) ;
+
+
+
+		</script>
+
+		
+
+
+</body>
+</html>
+

@@ -1,0 +1,122 @@
+% % are comments
+\documentclass[17pt]{beamer} 
+\usepackage{amsmath}
+\definecolor{blue}{RGB}{76,0,153}
+\setbeamercolor{alerted text}{fg=blue}
+\definecolor{blue}{RGB}{76,0,153}
+\setbeamercolor{structure}{fg=blue}
+\beamertemplateshadingbackground{white!8}{blue!7}
+\usepackage{beamerthemesplit}
+%\usepackage{beamerthemeshadow}
+%\setbeamersize{text margin left=0.25cm,text margin right=0.5cm}
+
+\logo{%
+  \makebox[0.95\paperwidth]{%
+    \includegraphics[width=1cm,keepaspectratio]{sih_logo.png}%
+    \hfill%
+    \includegraphics[width=1cm,keepaspectratio]{git_logo.png}%
+  }%
+}
+
+\begin{document}
+\sffamily \bfseries
+ \title
+[ \hspace{2 cm} CAPES ]
+{Computerized Application for Paper-less Examination Screening system for Recruitment}
+\author
+[  Team NAAVU \hspace{1.5 cm} ]
+{% \\ for new line , \small for small font size
+\small 
+      \\ Smart India Hackathon 2018
+      \\
+% To remove date comment or remove next line 
+{\small 30-31 March 2018} \\[0.4cm]
+}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Problems faced by Job Seekers} \pause
+\begin{itemize}[<+-|alert@+>]
+\item Time, funds, different exam centers
+\item Strikes / Bandh
+\item Unaffordable, Non-availability of transportation
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Problems faced by Recruiters} \pause
+\begin{itemize}[<+-|alert@+>]
+\item Selecting examination centers, supervisors, invigilators
+\item Transportation, security of question papers, answer sheets
+\item Paper leak, re-examination
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Proposed Solution : CAPES} \pause
+\begin{itemize}[<+-|alert@+>]
+\item Computerized Application for Paper-less Examination Screening (CAPES) system for recruitment
+\item Examination as web based centrally controlled software solution
+\item Mobile application
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution Architecture} \pause
+
+
+ \begin{figure}[H]
+	  \centering
+	  \fbox{ \includegraphics[scale=0.38]{architecture.png} }
+	  \caption{CAPES Architecture}
+  \end{figure}
+
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{Technology} \pause
+
+\begin{itemize}
+[<+-|alert@+>]
+\item Bootstrap, JSON, AJAX, JQuery
+\item PHP, MySQL
+\item XML, Java
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Security} \pause
+\begin{itemize}[<+-|alert@+>]
+\item Face and keystroke recognition
+\item One window
+\item E-mail, One Time Password
+\item Answers in Encrypted format
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Suggestions from Round 1} \pause
+\begin{itemize}[<+-|alert@+>]
+\item Difficulty level, time for questions
+\item JSON
+\item AJAX, JQuery
+\item Browser dependencies, Chrome, Firefox, Opera, Safari, Edge
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Additonal Features} \pause
+\begin{itemize}[<+-|alert@+>]
+\item Recognise face, flag inconsistency
+\item Keystroke recognition
+\item Report and Results generation
+\item Bootstrap, uniform appearance
+\end{itemize}
+\end{frame}
+
+\end{document}
