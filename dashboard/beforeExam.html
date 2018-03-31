@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CAPES</title>
+	<script type="text/javascript">
+		 function openWindow() {
+            var curr_browser = navigator.appName;
+            if (curr_browser == "Microsoft Internet Explorer") {
+                window.opener = self;
+            }
+            //window.open('samp1.php', 'null', 'toolbar=no,menubar=no,scrollbars=yes,location=no,resizable =yes,top=500,left=500,width=4000,height=4000');
+            //window.open("samp1.php","null",'height=240,width=200,top=' + top + ',left=' + left + ',directories=no,titlebar=nostatus=no,toolbar=no,menubar=no,navigationbar=no,location=no,resizable=no,scrollbars=no');
+
+            window.open("samp1.php", "mywindow", "location=0, titlebar=0");
+
+            window.moveTo(0, 0);
+            window.resizeTo(screen.width, screen.height);
+        }
+	</script>
+</head>
+<body>
+<a target="_parent" href="javascript:void(0);" onclick="openWindow();">Start Exam</a> 
+</body>
+</html>

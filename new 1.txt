@@ -1,0 +1,58 @@
+$(document).ready(function(){
+$('.submit').click(function(){
+    validateForm();   
+});
+
+function validateForm(){
+$("#showfileerror").html("");
+    var nameReg = /^[A-Za-z]+$/;
+    var numberReg =  /^[0-9]+$/;
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+	var aadharReg = /^[0-9]+$/;
+
+    var names = $('#name').val();
+    var email = $('#email').val();
+    var password = $('#password').val();
+    var telephone = $('#phone').val();
+    var aadhar = $('#aadhar').val();
+
+    var inputVal = new Array(names,email,telephone,aadhar,password);
+
+    var inputMessage = new Array("name", "email","telephone","aadhar","password");
+
+     
+
+        if(inputVal[0] == ""){
+            $('#name').after('<span class="error"> Please enter your ' + inputMessage[0] + '</span>');
+        } 
+        else if(!nameReg.test(names)){
+            $('#name').after('<span class="error"> Letters only</span>');
+        }
+
+        if(inputVal[1] == ""){
+            $('#email').after('<span class="error"> Please enter your ' + inputMessage[1] + '</span>');
+        }
+
+        if(inputVal[2] == ""){
+            $('#email').after('<span class="error"> Please enter your ' + inputMessage[2] + '</span>');
+        } 
+        else if(!emailReg.test(email)){
+            $('#email').after('<span class="error"> Please enter a valid email address</span>');
+        }
+
+        if(inputVal[3] == ""){
+            $('#phone').after('<span class="error"> Please enter your ' + inputMessage[3] + '</span>');
+        } 
+        else if(!numberReg.test(telephone)){
+            $('#phone').after('<span class="error"> Numbers only</span>');
+        }
+
+        if(inputVal[4] == ""){
+            $('#aadhar').after('<span class="error"> Please enter your ' + inputMessage[4] + '</span>');
+        }   
+		 else if(!aadharReg.test(aadhar)){
+            $('#aadhar').after('<span class="error"> Numbers only</span>');
+        }
+}   
+
+});
